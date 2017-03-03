@@ -1,0 +1,164 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Antlm" >
+
+    <ScrollView
+        android:id="@+id/ascroll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:gravity="center_horizontal">
+        
+        <RelativeLayout
+            android:id="@+id/AllLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" 
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/user"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/euser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView1"
+                android:layout_below="@+id/textView1"
+                android:ems="10"
+                android:hint="@string/Username"
+                android:text="@string/blank" >
+
+                <requestFocus />
+            </EditText>
+
+            <EditText
+                android:id="@+id/einputport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/eserver"
+                android:layout_alignRight="@+id/eserver"
+                android:layout_below="@+id/textView4"
+                android:ems="10"
+                android:hint="@string/portHint"
+                android:inputType="numberSigned" >
+
+            </EditText>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/euser"
+                android:layout_below="@+id/euser"
+                android:text="@string/Password"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/eserver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/epass"
+                android:layout_below="@+id/textView3"
+                android:ems="10"
+                android:hint="@string/serverHint" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView3"
+                android:layout_below="@+id/eserver"
+                android:text="@string/InputPort"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/einputport"
+                android:layout_below="@+id/einputport"
+                android:layout_marginTop="82dp"
+                android:onClick="clickRun"
+                android:text="@string/run" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/button1"
+                android:layout_alignBottom="@+id/button1"
+                android:layout_alignRight="@+id/euser"
+                android:onClick="clickStop"
+                android:text="@string/stop" />
+
+            <EditText
+                android:id="@+id/eoutputport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/einputport"
+                android:layout_below="@+id/textView5"
+                android:ems="10"
+                android:hint="@string/portHint"
+                android:inputType="numberSigned" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView4"
+                android:layout_below="@+id/einputport"
+                android:text="@string/OutputPort"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/epass"
+                android:layout_below="@+id/epass"
+                android:text="@string/Domain"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView6"
+                android:layout_below="@+id/textView6"
+                android:layout_marginTop="42dp"
+                android:text="@string/Server"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <EditText
+                android:id="@+id/edomain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/euser"
+                android:layout_below="@+id/textView6"
+                android:ems="10"
+                android:hint="@string/domainHint" />
+
+            <EditText
+                android:id="@+id/epass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/euser"
+                android:layout_below="@+id/textView2"
+                android:ems="10"
+                android:inputType="textPassword" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
